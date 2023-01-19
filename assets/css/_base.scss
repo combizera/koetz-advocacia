@@ -16,8 +16,8 @@ $grey-dark: #202020;
 $red: #c20000;
 
 // Responsive
-$container-xl: 1440px;
-$container-l: 1140px;
+$container-xl: 1240px;
+$container-l: 1100px;
 $container-m: 960px;
 $container-s: 540px;
 
@@ -34,10 +34,9 @@ body {
 }
 
 // Responsividade
-
 @mixin responsive($device) {
   @if $device == xl {
-    // For resolutions upper than 1440px
+    // For resolutions upper than 1240px
     @media screen and (min-width: $container-xl) {
       @content;
     }
@@ -68,7 +67,7 @@ body {
   max-width: $container-xl;
   margin: 0 auto;
 
-  border: 1px solid red;
+  border: 2px solid green;
 
   @include responsive(s) {
     flex-direction: column;
@@ -79,4 +78,13 @@ body {
 img {
   max-width: 100%;
   object-fit: cover;
+}
+
+.txt-red {
+  color: $red;
+}
+
+.aspas {
+  font-size: 300px;
+  color: $grey-dark;
 }
